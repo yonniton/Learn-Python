@@ -9,6 +9,6 @@ print formatter % (formatter, formatter, formatter, formatter)
 print formatter % (
     "I had this thing.",
     "That you could type up right.",
-    "But it didn't sing.",
+    "But it didn't sing.", # python smart enough to change quotes to " if string has ' ?
     "So I said goodnight."
 )
