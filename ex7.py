@@ -21,6 +21,7 @@ end12 = "r"
 print end1 + end2 + end3 + end4 + end5 + end6,
 
 # comma joins the following line, this is used to keep the code sentence shorter ?
+# any python code more than 80 character long per sentence is bad practice
 
 print end7 + end8 + end9 + end10 + end11 + end12
 
