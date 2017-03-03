@@ -10,7 +10,7 @@ weight_kg = weight_pounds * 0.45359237
 
 print "Let's talk about %s." % name
 print "He's %d inches tall." % height_inches
-print "He's %d cm tall." $ height_cm
+print "He's %d cm tall." % height_cm
 print "He's %d pounds heavy." % weight_pounds
 print "He's %d kg heavy." % weight_kg
 print "Actually that's not too heavy."
