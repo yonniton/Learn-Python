@@ -6,6 +6,7 @@ eyes = 'Blue'
 teeth = 'White'
 hair = 'Brown'
 cm = inches * 2.54
+kg = pounds * 0.45359237
 
 print "Let's talk about %s." % name
 print "He's %d inches tall." % height
