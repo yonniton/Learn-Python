@@ -1,24 +1,12 @@
 from sys import argv
-from os.path import exists
 
-script, from_file, to_file = argv
+script, src_name, dest_name = argv
 
-print "Copying from %s to %s" % (from_file, to_file)
+print "Copying from %r to %r" % (src_name, dest_name)
 
-# we could do these two on one line, how?
-in_file = open(from_file)
-indata = in_file.read()
+src_data = open(src_name).read()
+print "The input file is %d bytes long" % len(src_data)
 
-print "The input file is %d bytes long" % len(indata)
-
-print "Does the output file exist? %r" % exists(to_file)
-print "Ready, hit RETURN to continue, CTRL-C to abort."
-raw_input()
-
-out_file = open(to_file, 'w')
-out_file.write(indata)
+open(dest_name, 'w').write(src_data)
 
 print "Alright, all done."
-
-out_file.close()
-in_file.close()
