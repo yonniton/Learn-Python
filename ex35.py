@@ -1,16 +1,20 @@
 from sys import exit
+import re
+
 
 def gold_room():
     print "This room is full of gold.  How much will you take?"
 
-    choice = raw_input("> ")
-    if "0" in choice or "1" in choice:
-        how_much = int(choice)
+    matches = re.compile(r'([+-]?\d+)') \
+        .findall(raw_input("> "))
+    how_much = None
+    if len(matches) > 0:
+        how_much = int(matches[0])
     else:
         dead("Man, learn to type a number.")
 
-    if how_much < 50:
-        print "Nice, you're not greedy, you win!"
+    if (how_much is not None) and (how_much < 50):
+        print "Taking %d gold? Nice, you're not greedy, you win!" % how_much
         exit(0)
     else:
         dead("You greedy bastard!")
